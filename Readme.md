@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Степан Согомонян](https://up.htmlacademy.ru/adaptive-individual/2/user/2528903).
-* Наставник: `Антон Варнавский`.
+* Наставник: [Антон Варнавский](https://htmlacademy.ru/profile/anton_varnauski).
 
 ---
 
