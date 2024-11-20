@@ -3,15 +3,62 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Название проекта</title>
+  <title>Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="header">Шапка</header>
-  <p>Привет</p>
+  <header class="main-header">
+    <a class="main-header__logo" href="#">
+      <img src="images/logo-mobile.svg" alt="Логотип" width="33" height="38">
+      <h2 class="main-header__logo-title">Cat Energy</h2>
+    </a>
+    <nav class="main-navigation">
+      <button class="main-navigation__toogle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-navigation__wrapper">
+        <ul class="main-navigation__list site-list">
+          <li class="site-list__item site-list__item--current">
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-container">
+
+    <section class="choose">
+      <h1 class="choose-title">Функциональное питание для котов</h1>
+      <h3 class="choose-subtitle">Занялся собой? Займись котом!</h3>
+      <button class="choose-program" type="button">
+        Подобрать программу
+      </button>
+    </section>
+
+    <section class="hero">
+      <h2 class="visually-hidden">Презентация Cat Energy</h2>
+      <img class="hero-main" src="images/index-hero-food@2x.png" alt="Оранжевая упаковка Cat Energy" width="552" height="499">
+      <img class="hero-background" src="images/index-hero-cat@2x.png" alt="Облизывающийся кот" width="1041" height="694">
+    </section>
+
+  </main>
+
 </body>
 
 </html>
