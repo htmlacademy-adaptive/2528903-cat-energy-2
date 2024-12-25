@@ -1,0 +1,30 @@
+.card__subtitle {
+  @include font($font-secondary, 400, 16px, 20px);
+  text-transform: uppercase;
+  color: $text-extra;
+}
+
+.card__char-desk {
+  @include font($font-primary, 400, 12px, 16px);
+  text-align: center;
+  color: $text-secondary;
+}
+
+.card__char-value {
+  @include font($font-primary, 400, 12px, 16px);
+  text-align: center;
+  color: $text-secondary;
+}
+
+.card__more {
+  @include font($font-primary, 400, 12px, 16px);
+  text-align: center;
+  color: $text-secondary;
+}
+
+.card__button-more {
+  @include font($font-secondary, 400, 16px, 20px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-secondary;
+}

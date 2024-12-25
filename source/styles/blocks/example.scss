@@ -1,0 +1,36 @@
+.example__title {
+  @include font($font-secondary, 400, 36px, 40px);
+  text-align: center;
+  color: $text-main;
+}
+
+.example__description {
+  @include font($font-primary, 400, 14px, 18px);
+  color: $text-secondary;
+}
+
+.example__stats {
+  @include font($font-secondary, 400, 24px, 24px);
+  text-align: center;
+  color: $text-main;
+}
+
+.example__loss {
+  @include font($font-primary, 400, 12px, 12px);
+  text-align: center;
+  color: $text-secondary;
+}
+
+.example__food {
+  @include font($font-secondary, 400, 14px, 20px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-main;
+}
+
+.example__money {
+  @include font($font-secondary, 400, 14px, 20px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-main;
+}

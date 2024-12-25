@@ -1,0 +1,11 @@
+.catalog__title {
+  @include font($font-secondary, 400, 36px, 36px);
+  color: $text-main;
+}
+
+.catalog__button {
+  @include font($font-secondary, 400, 16px, 20px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-bg;
+}

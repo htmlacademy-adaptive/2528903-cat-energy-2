@@ -1,0 +1,4 @@
+.footer__html {
+  @include font($font-primary, 400, 16px, 20px);
+  color: $text-secondary;
+}

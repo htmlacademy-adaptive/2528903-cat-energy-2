@@ -1,0 +1,31 @@
+.extra__title {
+  @include font($font-secondary, 400, 24px, 24px);
+  text-align: center;
+  color: $text-main;
+}
+
+.extra__subtitle {
+  @include font($font-secondary, 400, 16px, 16px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-extra;
+}
+
+.extra__description {
+  @include font($font-primary, 400, 14px, 14px);
+  text-align: center;
+  color: $text-secondary;
+}
+
+.extra__price {
+  @include font($font-primary, 400, 14px, 14px);
+  text-align: right;
+  color: $text-secondary;
+}
+
+.extra__button {
+  @include font($font-secondary, 400, 16px, 20px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-bg;
+}

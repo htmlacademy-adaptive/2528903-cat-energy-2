@@ -1,0 +1,5 @@
+.site-list__link {
+  @include font($font-secondary, 400, 18px, 24px);
+  text-transform: uppercase;
+  color: $text-main;
+}

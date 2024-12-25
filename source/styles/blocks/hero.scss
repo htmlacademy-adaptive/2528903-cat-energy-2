@@ -1,11 +1,18 @@
-.hero__main-img {
-  @media (min-width: $tablet-width) {
-    order: 2;
-    height: 300px;
+.hero__title {
+  @include font($font-secondary, 400, 36px, 36px);
+  text-align: center;
+  color: $text-bg; /* текст белый на белом (мобилка) */
+}
 
-    background-image: url("/source/images/index-hero-food@1x.webp");
-    background-color: #ffffff;
-    background-repeat: no-repeat;
-    background-position: 50% auto;
-  }
+.hero__subtitle {
+  @include font($font-secondary, 400, 14px, 14px);
+  text-transform: uppercase;
+  color: $text-bg;
+}
+
+.hero__button {
+  @include font($font-secondary, 400, 16px, 20px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-bg;
 }

@@ -1,0 +1,26 @@
+.subscribe__title {
+  @include font($font-secondary, 400, 24px, 24px);
+  text-align: center;
+  color: $text-main;
+}
+
+.subscribe__subtitle {
+  @include font($font-secondary, 400, 16px, 24px);
+  text-align: center;
+  color: $text-main;
+}
+
+.subscribe__field {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $text-secondary;
+}
+
+.subscribe__button {
+  @include font($font-secondary, 400, 20px, 26px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-secondary;
+}

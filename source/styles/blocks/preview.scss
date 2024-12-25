@@ -1,0 +1,17 @@
+.preview__title {
+  @include font($font-secondary, 400, 24px, 37px);
+  text-transform: uppercase;
+  color: $text-main;
+}
+
+.preview__description {
+  @include font($font-secondary, 400, 14px, 18px);
+  color: $text-secondary;
+}
+
+.preview__link {
+  @include font($font-secondary, 400, 16px, 16px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-main;
+}

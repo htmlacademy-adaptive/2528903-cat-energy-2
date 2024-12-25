@@ -1,0 +1,5 @@
+.aside__description {
+  @include font($font-primary, 400, 16px, 20px);
+  text-align: center;
+  color: $text-bg;
+}

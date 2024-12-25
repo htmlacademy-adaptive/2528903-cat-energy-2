@@ -1,0 +1,10 @@
+.map__title {
+  @include font($font-secondary, 400, 16px, 20px);
+  text-transform: uppercase;
+  color: $text-last;
+}
+
+.map__address {
+  @include font($font-primary, 400, 14px, 20px);
+  color: $text-secondary;
+}

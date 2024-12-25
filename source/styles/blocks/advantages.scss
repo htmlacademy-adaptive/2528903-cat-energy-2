@@ -1,0 +1,10 @@
+.advantages__title {
+  @include font($font-secondary, 400, 36px, 40px);
+  text-align: center;
+  color: $text-main;
+}
+
+.advantages__description {
+  @include font($font-primary, 400, 14px,18px);
+  color: $text-secondary;
+}
