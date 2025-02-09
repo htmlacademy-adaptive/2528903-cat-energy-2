@@ -1,10 +1,305 @@
+.advantages {
+  width: calc(100% - 40px);
+  margin: 0 auto 26px;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-color: #d9d9d9;
+      height: 1px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: -30px;
+      right: -30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    position: static;
+    margin-bottom: 69px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .advantages__title {
   @include font($font-secondary, 400, 36px, 40px);
-  text-align: center;
+  text-align: left;
   color: $text-main;
+  margin: 0;
+  padding-bottom: 43px;
+
+  @media (min-width: $tablet-width) {
+    @include font($font-secondary, 400, 60px, 60px);
+    text-align: left;
+    color: $text-main;
+    padding-bottom: 32px;
+  }
+}
+
+.advantages__list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 60px;
+    counter-reset: number 0;
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: $laptop-width) {
+    display: grid;
+    column-gap: 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include flex(flex, row, wrap);
+    justify-content: space-between;
+    row-gap: 0;
+    padding-bottom: 0;
+  }
+}
+
+.advantages__item {
+  @include flex (flex, row, nowrap);
+  min-height: 80px;
+
+  &:not(:last-child) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include flex(flex, column, wrap);
+    min-height: 280px;
+
+    &:not(:last-child) {
+      padding-bottom: 0;
+    }
+
+    &::after {
+      @include font($font-secondary, 400, 280px, 280px);
+      content: counter(number);
+      counter-increment: number;
+      position: absolute;
+      top: 0;
+      right: 9px;
+      transform: translateX(-50%);
+      color: #f2f2f2;
+      z-index: -1;
+    }
+
+    &:first-child::after {
+      @include font($font-secondary, 400, 280px, 280px);
+      content: counter(number);
+      counter-increment: number;
+      position: absolute;
+      top: 0;
+      right: 45px;
+      transform: translateX(-50%);
+      color: #f2f2f2;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 250px;
+    position: relative;
+
+    &::after {
+      @include font($font-secondary, 400, 280px, 280px);
+      content: counter(number);
+      counter-increment: number;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: none;
+      color: #f2f2f2;
+      z-index: -1;
+    }
+
+    &:first-child::after {
+      @include font($font-secondary, 400, 280px, 280px);
+      content: counter(number);
+      counter-increment: number;
+      position: absolute;
+      top: 0;
+      right: 2px;
+      transform: none;
+      color: #f2f2f2;
+      z-index: -1;
+    }
+  }
+}
+
+.advantages__item--leaf {
+  position: relative;
+
+  &::before {
+    @include pseudo(60px, 60px);
+    background-color: $bg-main;
+    background-image: url("../../icons/stack.svg#index-leaf");
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position: center;
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      @include pseudo(80px, 80px);
+      background-color: $bg-main;
+      background-image: url("../../icons/stack.svg#index-leaf");
+      background-repeat: no-repeat;
+      background-size: 28px 28px;
+      background-position: center;
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+    margin-right: 17px;
+  }
+}
+
+.advantages__item--powder {
+  position: relative;
+
+  &::before {
+    @include pseudo(60px, 60px);
+    background-color: $bg-main;
+    background-image: url("../../icons/stack.svg#index-powder");
+    background-repeat: no-repeat;
+    background-size: 27px 31px;
+    background-position: center;
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      @include pseudo(80px, 80px);
+      background-color: $bg-main;
+      background-image: url("../../icons/stack.svg#index-powder");
+      background-repeat: no-repeat;
+      background-size: 27px 31px;
+      background-position: center;
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 246px;
+  }
+}
+
+.advantages__item--instruments {
+  position: relative;
+
+  &::before {
+    @include pseudo(60px, 60px);
+    background-color: $bg-main;
+    background-image: url("../../icons/stack.svg#index-instruments");
+    background-repeat: no-repeat;
+    background-size: 26px 32px;
+    background-position: center;
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      @include pseudo(80px, 80px);
+      background-image: url("../../icons/stack.svg#index-instruments");
+      background-repeat: no-repeat;
+      background-size: 26px 32px;
+      background-position: center;
+      background-color: $bg-main;
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 248px;
+  }
+}
+
+.advantages__item--clock {
+  position: relative;
+
+  &::before {
+    @include pseudo(60px, 60px);
+    background-color: $bg-main;
+    background-image: url("../../icons/stack.svg#index-clock");
+    background-repeat: no-repeat;
+    background-size: 27px 32px;
+    background-position: center;
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      @include pseudo(80px, 80px);
+      background-image: url("../../icons/stack.svg#index-clock");
+      background-repeat: no-repeat;
+      background-size: 27px 32px;
+      background-position: center;
+      background-color: $bg-main;
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
 }
 
 .advantages__description {
-  @include font($font-primary, 400, 14px,18px);
+  @include font($font-primary, 400, 14px, 18px);
   color: $text-secondary;
+  margin: 0;
+  padding-left: 80px;
+
+  @media (min-width: $tablet-width) {
+    @include font($font-primary, 400, 16px, 24px);
+    color: $text-secondary;
+    text-align: left;
+    padding: 0;
+    padding-top: 151px;
+    width: 75%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.advantages__tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

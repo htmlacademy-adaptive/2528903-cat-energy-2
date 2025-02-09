@@ -1,5 +1,84 @@
-.site-list__link {
-  @include font($font-secondary, 400, 18px, 24px);
-  text-transform: uppercase;
-  color: $text-main;
+.navigation {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 7px;
+    padding-right: 2px;
+  }
+}
+
+
+.navigation__toogle {
+  @media (max-width: $mobile-max) {
+    @include pseudo(24px, 24px);
+    position: absolute;
+    background-color: #ffffff;
+    border: none;
+    padding: 0;
+    top: 18px;
+    right: 21px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.navigation--closed .navigation__toogle::before {
+  @include pseudo (24px, 2px);
+  position: absolute;
+  background-color: #000000;
+  top: 4px;
+  right: 0;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000; //через box-shadow нельзя анимировать, для этого использовать before after
+}
+
+.navigation--opened {
+  @media (max-width: $mobile-max) {
+    align-self: normal;
+  }
+}
+
+.navigation--opened .navigation__toogle {
+  &::before {
+    @include pseudo (24px, 2px);
+    position: absolute;
+    background-color: #000000;
+    top: 12px;
+    right: 0;
+    box-shadow: none;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    @include pseudo (24px, 2px);
+    position: absolute;
+    background-color: #000000;
+    top: 12px;
+    right: 0;
+    box-shadow: none;
+    transform: rotate(-45deg);
+  }
+}
+
+.navigation--closed .navigation__list {
+  @media (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+// catalog
+
+.header--catalog .navigation {
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
 }

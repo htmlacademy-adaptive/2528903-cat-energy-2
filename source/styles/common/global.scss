@@ -8,3 +8,13 @@ body {
   font-family: "Lato", "Arial", sans-serif;
   color: $text-main;
 }
+
+picture {
+  display: contents;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

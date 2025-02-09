@@ -1,4 +1,90 @@
+.footer {
+  background-color: $bg-secondary;
+}
+
+.footer__wrapper {
+  @include flex(flex, column, wrap);
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    @include flex(flex, row, wrap);
+    width: calc(100% - 60px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding: 68px 0;
+  }
+}
+
+.footer__title {
+  padding-top: 40px;
+  margin: 0 auto;
+  transition: ease-in-out 0.8s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.4;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.footer__academy {
+  text-decoration: none;
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    max-width: 25%;
+  }
+}
+
+.footer__academy--link {
+  transition: ease-in-out 0.6s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &::after {
+    @include pseudo(27px, 35px);
+    mask-image: url("../../icons/stack.svg#academy");
+    mask-repeat: no-repeat;
+    background-color: #666666;
+    mask-size: 27px 35px;
+    margin-left: auto;
+    transition: ease-in-out 0.6s;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $bg-main;
+  }
+}
+
 .footer__html {
   @include font($font-primary, 400, 16px, 20px);
   color: $text-secondary;
+  padding-top: 7px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 23px;
+    padding-top: 0;
+    padding-bottom: 4px;
+  }
 }

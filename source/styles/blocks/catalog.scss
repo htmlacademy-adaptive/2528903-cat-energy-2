@@ -1,11 +1,97 @@
+.catalog {
+  position: relative;
+  overflow-x: hidden;
+
+  &::before {
+    @include pseudo(100%, 1px);
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+  }
+}
+
 .catalog__title {
   @include font($font-secondary, 400, 36px, 36px);
   color: $text-main;
+  text-align: left;
+  margin: 0;
+  padding-top: 27px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  position: relative;
+
+  &::after {
+    @include pseudo(100%, 1px);
+    background-color: #ebebeb;
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font($font-secondary, 400, 60px, 60px);
+    color: $text-main;
+    text-align: left;
+    padding: 0;
+    position: static;
+    padding-bottom: 84px;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
-.catalog__button {
-  @include font($font-secondary, 400, 16px, 20px);
-  text-transform: uppercase;
-  text-align: center;
-  color: $text-bg;
+.catalog__wrapper {
+  @include flex(flex, row, wrap);
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  justify-content: center;
+  column-gap: 30px;
+  position: relative;
+  margin-bottom: 15px;
+
+  &::after {
+    @include pseudo(500%, 1px);
+    position: absolute;
+    background-color: #d9d9d9;
+    bottom: 10px;
+    left: -200px;
+    right: -200px;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 60px;
+    position: static;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 74px;
+    justify-content: space-around;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 245px);
+    gap: 63px 80px;
+    margin-bottom: 71px;
+  }
 }

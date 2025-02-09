@@ -23,3 +23,9 @@
 }
 
 /* Миксин с флексом */
+@mixin flex ($display, $direction, $wrap) {
+  display: $display;
+  flex-direction: $direction;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  flex-wrap: $wrap;
+}
