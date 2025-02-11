@@ -43,11 +43,12 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 324px;
+    grid-template-rows: auto;
     padding: 0;
     padding-bottom: 40px;
     background-image: linear-gradient(#ffffff 0 16%, #f2f2f2 16%);
     width: auto;
-    height: 511px;
+    min-height: 511px;
 
     &::after {
       display: none;
@@ -57,9 +58,10 @@
       background-image: none;
       border: 1px solid #f2f2f2;
       grid-template-columns: 322px;
-      height: 430px;
+      min-height: 433px;
       margin-top: auto;
       padding-bottom: 42px;
+      grid-template-rows: auto;
 
       &::before {
         @include pseudo(2px, 60px);
@@ -85,6 +87,8 @@
 
     &:last-child {
       grid-template-columns: 243px;
+      grid-template-rows: 51% 50% 1fr;
+      min-height: 430px;
     }
   }
 }
@@ -104,23 +108,23 @@
 .card__picture--small {
   @media (min-width: $tablet-width) {
     margin-top: 29px;
-    margin-bottom: 22px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 5px;
+    margin-bottom: 30px;
   }
 }
 
 .card__picture--big {
   @media (min-width: $tablet-width) {
-    margin-top: 15px;
-    margin-bottom: 7px;
+    margin-top: 13px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 17px;
-    margin-bottom: -8px;
+    margin-bottom: 20px;
   }
 }
 
@@ -143,10 +147,12 @@
     grid-column: 1/-1;
     grid-row: 2/3;
     width: 150px;
+    margin-bottom: 19px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 3px;
+    margin-bottom: 22px;
+    padding-top: 1px;
     padding-right: 3px;
   }
 }
@@ -264,14 +270,15 @@
   @media (min-width: $tablet-width) {
     @include font($font-secondary, 400, 20px, 24px);
     padding: 0;
-    padding-top: 19px;
+    padding-top: 12px;
     width: 140px;
     place-self: center center;
     grid-row: 1/2;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 0;
+    align-self: self-end;
+    padding: 0;
   }
 }
 
@@ -286,12 +293,15 @@
     width: 175px;
     place-self: center;
     padding: 0;
-    padding-top: 148px;
+    padding-top: 141px;
     grid-row: 1/2;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 130px;
+    align-self: start;
+    margin-top: 27px;
+    grid-row: 2 / 3;
+    padding: 0;
   }
 }
 
@@ -334,5 +344,6 @@
   @media (min-width: $desktop-width) {
     width: 169px;
     padding: 10px 35px;
+    grid-row: 2 / 3;
   }
 }

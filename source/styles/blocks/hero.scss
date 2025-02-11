@@ -5,14 +5,14 @@
 
   @media (min-width: $tablet-width) {
     @include flex(flex, column, wrap);
-    height: 790px;
+    min-height: 790px;
   }
 
   @media (min-width: $desktop-width) {
     @include flex(flex, row, wrap);
     margin-bottom: 266px;
     padding-top: 224px;
-    height: auto;
+    min-height: auto;
 
     &::before {
       @include pseudo(50%, 694px);
@@ -25,6 +25,7 @@
         );
       background-repeat: no-repeat;
       background-size: cover;
+      background-color: #000000;
       top: 0;
       right: 0;
     }
@@ -193,7 +194,7 @@
     width: 559px;
     margin: 0;
     position: absolute;
-    top: -29%;
+    top: -83px;
     bottom: auto;
     left: 36%;
     transform: translate(6px, 1px);
