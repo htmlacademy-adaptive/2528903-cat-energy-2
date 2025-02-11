@@ -65,6 +65,17 @@
   transform: translateX(-50%);
   z-index: 1;
 
+  &:hover,
+  &:focus {
+    border: 2px solid #68b738;
+    outline: none;
+  }
+
+  &:active {
+    border: 2px solid #5eaa2f;
+    outline: none;
+  }
+
   &::before {
     @include pseudo(40px, 40px);
     position: absolute;
@@ -92,4 +103,24 @@
   @media (min-width: $tablet-width) {
     height: 512px;
   }
+}
+
+.slider__toggle:hover::before,
+.slider__toggle:focus::before {
+  border: 2px solid #68b738;
+  outline: none;
+}
+
+.slider__toggle:active::before {
+  border: 2px solid #5eaa2f;
+  outline: none;
+}
+
+.slider__toggle:hover::after,
+.slider__toggle:focus::after {
+  background-color: #68b738;
+}
+
+.slider__toggle:active::after {
+  background-color: #5eaa2f;
 }
