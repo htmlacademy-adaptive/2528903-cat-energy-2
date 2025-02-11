@@ -200,7 +200,7 @@
   text-align: right;
   color: $text-secondary;
   width: 50%;
-  letter-spacing: 0.3px; /* Мб и не нужно */
+  letter-spacing: 0.3px;
 
   @media (min-width: $tablet-width) {
     @include font($font-primary, 400, 16px, 20px);

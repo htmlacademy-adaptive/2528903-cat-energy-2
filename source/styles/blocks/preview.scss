@@ -143,7 +143,6 @@
       right: 63px;
     }
 
-
     &::after {
       @include pseudo(140px, 194px);
       background-image: url("../../icons/stack.svg#index-home-cat");
@@ -169,7 +168,6 @@
       right: auto;
     }
 
-
     &::after {
       @include pseudo(70px, 97px);
       background-image: url("../../icons/stack.svg#index-home-cat");
@@ -194,7 +192,6 @@
       left: 52px;
       right: auto;
     }
-
 
     &::after {
       @include pseudo(70px, 97px);
@@ -245,7 +242,6 @@
       left: auto;
       right: 63px;
     }
-
 
     &::after {
       @include pseudo(268px, 112px);
@@ -298,7 +294,6 @@
       left: 52px;
       right: auto;
     }
-
 
     &::after {
       @include pseudo(134px, 56px);
@@ -446,29 +441,4 @@
       right: -15px;
     }
   }
-
-  /* @media (min-width: $desktop-width) {
-    &::before {
-      @include pseudo(18px, 2px);
-      background-color: $text-main;
-      position: absolute;
-      top: 10px;
-      right: 1px;
-    }
-
-    &::after {
-      @include pseudo(24px, 12px);
-      mask-image: url("../../icons/stack.svg#index-arrow");
-      mask-repeat: no-repeat;
-      mask-size: 24px, 12px;
-      background-color: $text-main;
-      position: absolute;
-      top: 5px;
-      right: -5px;
-    }
-
-    &:hover::after {
-      right: -15px;
-    }
-  } */
 }

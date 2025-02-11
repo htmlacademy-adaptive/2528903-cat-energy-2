@@ -65,7 +65,6 @@
   transform: translateX(-50%);
   z-index: 1;
 
-
   &::before {
     @include pseudo(40px, 40px);
     position: absolute;
