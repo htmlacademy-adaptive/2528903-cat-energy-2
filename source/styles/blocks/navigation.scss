@@ -75,6 +75,18 @@
   }
 }
 
+.navigation--nojs .navigation__list {
+  @media (max-width: $mobile-max) {
+    @include flex(flex, column, nowrap);
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+}
+
 // catalog
 
 .header--catalog .navigation {

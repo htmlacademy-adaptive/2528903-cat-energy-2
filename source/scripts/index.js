@@ -1,12 +1,11 @@
 const navMain = document.querySelector('.navigation');
 const navToggle = document.querySelector('.navigation__toogle');
+const map = document.querySelector('.map__live');
+
+map.classList.remove('map__live--nojs');
+navMain.classList.remove('navigation--nojs');
 
 navToggle.addEventListener('click', () => {
-  if (navMain.classList.contains('navigation--closed')) {
-    navMain.classList.remove('navigation--closed');
-    navMain.classList.add('navigation--opened');
-  } else {
-    navMain.classList.add('navigation--closed');
-    navMain.classList.remove('navigation--opened');
-  }
+  navMain.classList.toggle('navigation--closed');
+  navMain.classList.toggle('navigation--opened');
 });
