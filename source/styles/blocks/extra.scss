@@ -223,7 +223,9 @@
 }
 
 .extra__item:nth-child(2) .extra__price {
-  padding-right: 50px;
+  @media (min-width: $desktop-width) {
+    padding-right: 50px;
+  }
 }
 
 .extra__button {
