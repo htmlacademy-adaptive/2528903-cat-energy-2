@@ -40,9 +40,8 @@
   padding-top: 27px;
 
   &::before {
-    @include pseudo(320px, 302px);
+    @include pseudo(100%, 63%);
     position: absolute;
-    min-width: 100%;
     background-image:
       linear-gradient(rgba(104, 183, 56, 0.85) 0% 100%),
       image-set(
