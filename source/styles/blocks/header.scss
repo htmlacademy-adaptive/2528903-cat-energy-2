@@ -134,3 +134,38 @@
     margin-left: 0;
   }
 }
+
+.header--catalog .navigation {
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.header--catalog .site-list__item--current {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      @include pseudo (100%, 2px);
+      position: absolute;
+      background-color: $bg-main;
+      bottom: -8px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      bottom: -10px;
+    }
+  }
+}
+
+.header--catalog .site-list {
+  padding-right: 2px;
+}
+
+.header--catalog .site-list__item {
+  &:first-child {
+    margin-right: 1px;
+  }
+}

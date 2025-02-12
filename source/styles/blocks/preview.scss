@@ -4,11 +4,12 @@
 
   @media (min-width: $tablet-width) {
     width: calc(100% - 60px);
-    margin: 0 auto;
+    margin: -103px auto 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 1220px;
+    margin: 0 auto;
     margin-bottom: 71px;
   }
 }
@@ -24,6 +25,7 @@
   @media (min-width: $desktop-width) {
     @include flex(flex, row, wrap);
     justify-content: space-between;
+    gap: 20px;
   }
 }
 
@@ -62,11 +64,14 @@
 
   @media (min-width: $desktop-width) {
     @include flex(flex, column, nowrap);
-    max-width: auto;
     width: 570px;
     min-height: 374px;
     margin-bottom: 0;
     position: relative;
+
+    &:first-child {
+      margin-right: 0;
+    }
 
     &:last-child {
       margin-bottom: 0;

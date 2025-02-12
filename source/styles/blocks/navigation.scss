@@ -85,11 +85,3 @@
     background-color: #ffffff;
   }
 }
-
-// catalog
-
-.header--catalog .navigation {
-  @media (min-width: $desktop-width) {
-    padding-right: 0;
-  }
-}
