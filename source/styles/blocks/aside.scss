@@ -1,14 +1,14 @@
 .aside {
-  height: 290px;
+  min-height: 290px;
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    height: 200px;
+    min-height: 200px;
     margin-bottom: 80px;
   }
 
   @media (min-width: $desktop-width) {
-    height: auto;
+    min-height: auto;
     width: 245px;
     margin: 0;
   }
@@ -30,7 +30,7 @@
   }
 
   &::after {
-    @include pseudo(280px, 290px);
+    @include pseudo(280px, 100%);
     position: absolute;
     background-image:
       linear-gradient(rgba(104, 183, 56, 0.85) 0% 100%),
@@ -61,7 +61,7 @@
     }
 
     &::after {
-      @include pseudo(707px, 200px);
+      @include pseudo(707px, 100%);
       position: absolute;
       background-image:
         linear-gradient(rgba(104, 183, 56, 0.85) 0% 100%),
