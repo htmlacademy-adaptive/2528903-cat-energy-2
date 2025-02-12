@@ -1,0 +1,139 @@
+.aside {
+  min-height: 290px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: auto;
+    width: 245px;
+    margin: 0;
+  }
+}
+
+.aside--gift {
+  position: relative;
+
+  &::before {
+    @include pseudo(78px, 80px);
+    background-image: url("../../icons/stack.svg#catalog-gift");
+    background-repeat: no-repeat;
+    background-size: 78px 80px;
+    background-color: transparent;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    @include pseudo(280px, 100%);
+    position: absolute;
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85) 0% 100%),
+      image-set(
+        url("/images/catalog/aside-gift-cat-mobile@1x.webp") 1x,
+        url("/images/catalog/aside-gift-cat-mobile@2x.webp") 2x
+      );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+    min-width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      @include pseudo(80px, 82px);
+      background-image: url("../../icons/stack.svg#catalog-gift");
+      background-repeat: no-repeat;
+      background-size: 80px 82px;
+      background-color: transparent;
+      position: absolute;
+      top: 48%;
+      left: 78px;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      @include pseudo(707px, 100%);
+      position: absolute;
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85) 0% 100%),
+        image-set(
+          url("/images/catalog/aside-gift-cat-tablet@1x.webp") 1x,
+          url("/images/catalog/aside-gift-cat-tablet@2x.webp") 2x
+        );
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-width: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      @include pseudo(80px, 82px);
+      background-image: url("../../icons/stack.svg#catalog-gift");
+      background-repeat: no-repeat;
+      background-size: 80px 82px;
+      background-color: transparent;
+      position: absolute;
+      top: 97px;
+      left: 83px;
+    }
+
+    &::after {
+      @include pseudo(245px, 100%);
+      position: absolute;
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85) 0% 100%),
+        image-set(
+          url("/images/catalog/aside-gift-cat-desktop@1x.webp") 1x,
+          url("/images/catalog/aside-gift-cat-desktop@2x.webp") 2x
+        );
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-width: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.aside__description {
+  @include font($font-primary, 400, 16px, 20px);
+  text-align: center;
+  color: $text-bg;
+  display: block;
+  padding-top: 187px;
+  width: 66%;
+  margin: 0 auto;
+  padding-right: 3px;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    padding-top: 69px;
+    padding-left: 59.6%;
+    width: 85%;
+    margin: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 185px;
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,201 @@
+.hero {
+  @include flex(flex, column, wrap);
+  position: relative;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include flex(flex, column, wrap);
+    min-height: 790px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include flex(flex, row, wrap);
+    margin-bottom: 266px;
+    padding-top: 224px;
+    min-height: auto;
+
+    &::before {
+      @include pseudo(50%, 694px);
+      position: absolute;
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85) 0% 100%),
+        image-set(
+          url("/images/index/index-hero-cat-desktop@1x.webp") 1x,
+          url("/images/index/index-hero-cat-desktop@2x.webp") 2x
+        );
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #000000;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.hero__choose {
+  @include flex(flex, column, wrap);
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  align-items: center;
+  padding-top: 27px;
+
+  &::before {
+    @include pseudo(100%, 63%);
+    position: absolute;
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85) 0% 100%),
+      image-set(
+        url("/images/index/index-hero-cat-mobile@1x.webp") 1x,
+        url("/images/index/index-hero-cat-mobile@2x.webp") 2x
+      );
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+    width: 70%;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.hero__title {
+  @include font($font-secondary, 400, 36px, 36px);
+  text-transform: none;
+  text-align: center;
+  color: $text-bg;
+  margin: 0;
+  padding: 0 15px 25px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    @include font($font-secondary, 400, 60px, 60px);
+    text-transform: none;
+    text-align: left;
+    color: $text-main;
+    margin: 0;
+    margin-left: 120px;
+    min-width: 55%;
+    padding: 0;
+    padding-bottom: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 0;
+    width: 450px;
+    margin: 0;
+    margin-left: 80px;
+    padding: 0;
+    padding-bottom: 40px;
+  }
+}
+
+.hero__subtitle {
+  @include font($font-secondary, 400, 14px, 14px);
+  text-transform: uppercase;
+  color: $text-bg;
+  margin: 0;
+  padding-bottom: 29px;
+  padding-right: 3px;
+
+  @media (min-width: $tablet-width) {
+    @include font($font-secondary, 400, 20px, 20px);
+    text-transform: uppercase;
+    text-align: left;
+    color: $text-main;
+    margin-left: 120px;
+    padding-bottom: 49px;
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 450px;
+    margin-left: 80px;
+    padding-bottom: 52px;
+  }
+}
+
+.hero__button {
+  @include font($font-secondary, 400, 16px, 20px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-bg;
+  text-decoration: none;
+  margin: 0;
+  margin-top: 3px;
+  border: none;
+  padding: 10px 44px;
+  width: 280px;
+  order: 4;
+  transition: ease-in-out 0.6s;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font($font-secondary, 400, 20px, 26px);
+    text-transform: uppercase;
+    text-align: center;
+    color: $text-bg;
+    text-decoration: none;
+    margin: 0;
+    margin-left: 120px;
+    margin-top: 0;
+    border: none;
+    padding: 14px 26px;
+    width: 242px;
+    order: 0;
+    z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
+  }
+}
+
+.hero__main-img {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    width: 709px;
+    margin-left: 30px;
+    bottom: 83px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 559px;
+    margin: 0;
+    position: absolute;
+    top: -83px;
+    bottom: auto;
+    left: 36%;
+    transform: translate(6px, 1px);
+  }
+}

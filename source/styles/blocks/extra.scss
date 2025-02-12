@@ -1,0 +1,268 @@
+.extra {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% - 60px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include flex(flex, row, wrap);
+    width: 1440px;
+    margin-bottom: 96px;
+  }
+}
+
+.extra__title {
+  @include font($font-secondary, 400, 24px, 24px);
+  text-align: left;
+  color: $text-main;
+  margin: 0;
+  padding-bottom: 50px;
+  position: relative;
+  width: 230px;
+
+  &::after {
+    @include pseudo (500%, 2px);
+    position: absolute;
+    background-color: $bg-main;
+    top: 10px;
+    left: 115%;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font($font-secondary, 400, 32px, 32px);
+    padding-bottom: 80px;
+    padding-left: 40px;
+    width: 380px;
+    background-color: #ffffff;
+
+    &::after {
+      @include pseudo (500%, 2px);
+      position: absolute;
+      background-color: $bg-main;
+      top: 14px;
+      left: -30px;
+      right: -30px;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($font-secondary, 400, 40px, 40px);
+    width: 455px;
+    margin-left: 70px;
+    padding-left: 40px;
+
+    &::after {
+      @include pseudo (1200%, 2px);
+      position: absolute;
+      background-color: $bg-main;
+      top: 18px;
+      left: -50%;
+      right: auto;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+}
+
+.extra__list {
+  @include flex (flex, row, wrap);
+  justify-content: center;
+  column-gap: 30px;
+  position: relative;
+  padding-bottom: 20px;
+
+  &::before {
+    @include pseudo (100%, 1px);
+    position: absolute;
+    background-color: #cdcdcd;
+    top: -14px;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    position: static;
+    padding-bottom: 0;
+    margin-bottom: 69px;
+    border: 1px solid #cdcdcd;
+    column-gap: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    border-top: 1px solid #cdcdcd;
+    width: 896px;
+    margin: 0;
+    margin-left: 111px;
+    margin-right: 80px;
+    justify-content: flex-start;
+  }
+}
+
+.extra__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 34px;
+  position: relative;
+  width: 100%;
+  row-gap: 13px;
+
+  &::after {
+    @include pseudo (100%, 1px);
+    position: absolute;
+    background-color: #cdcdcd;
+    bottom: 15px;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 25% 25% 35% 15%;
+    align-self: center;
+    width: 100%;
+    padding: 26px 38px 28px;
+    row-gap: 25px;
+
+    &::after {
+      @include pseudo (100%, 1px);
+      position: absolute;
+      background-color: #cdcdcd;
+      bottom: 0;
+      left: 0;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 36.1% 27.2% 9.2% 1fr;
+    gap: 0;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 17px;
+
+    &:last-child::after {
+      display: block;
+    }
+  }
+}
+
+.extra__subtitle {
+  @include font($font-secondary, 400, 16px, 16px);
+  text-transform: uppercase;
+  text-align: left;
+  color: $text-extra;
+  margin: 0;
+  grid-column: 1/3;
+
+  @media (min-width: $tablet-width) {
+    @include font($font-secondary, 400, 20px, 20px);
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($font-secondary, 400, 20px, 20px);
+    place-self: center left;
+    grid-column: 1 / 2;
+  }
+}
+
+.extra__description {
+  @include font($font-primary, 400, 14px, 14px);
+  text-align: left;
+  color: $text-secondary;
+  margin: 0;
+  grid-column: 1/2;
+
+  @media (min-width: $tablet-width) {
+    @include font($font-primary, 400, 16px, 20px);
+    text-align: right;
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($font-primary, 400, 16px, 20px);
+    place-self: center left;
+    grid-column: 2 / 3;
+    padding-top: 4px;
+    padding-left: 3px;
+  }
+}
+
+.extra__price {
+  @include font($font-primary, 400, 14px, 14px);
+  text-align: right;
+  color: $text-secondary;
+  margin: 0;
+  grid-column: 2/3;
+
+  @media (min-width: $tablet-width) {
+    @include font($font-primary, 400, 16px, 20px);
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($font-primary, 400, 16px, 20px);
+    place-self: center right;
+    padding-right: 41px;
+    padding-top: 2px;
+    grid-column: 3 / 4;
+  }
+}
+
+.extra__item:nth-child(2) .extra__price {
+  @media (min-width: $desktop-width) {
+    padding-right: 50px;
+  }
+}
+
+.extra__button {
+  @include font($font-secondary, 400, 16px, 20px);
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-bg;
+  border: none;
+  width: 100%;
+  padding: 10px 109px;
+  grid-column: 1/3;
+  transition: ease-in-out 0.6s;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: 530px) {
+    padding: 10px 84px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    grid-column: 1/-1;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+    grid-column: 4 / 5;
+    padding: 10px 0;
+  }
+}
