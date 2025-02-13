@@ -1,6 +1,7 @@
 .preview {
   width: calc(100% - 40px);
   margin: 0 auto;
+  margin-top: 20px;
 
   @media (min-width: $tablet-width) {
     width: calc(100% - 60px);

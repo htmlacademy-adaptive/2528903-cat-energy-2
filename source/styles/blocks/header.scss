@@ -3,7 +3,7 @@
   text-align: center;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto 14px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     @include flex (flex, row, nowrap);
@@ -39,6 +39,7 @@
   width: calc(100% - 40px);
   align-items: center;
   padding-top: 13px;
+  padding-bottom: 14px;
   transition: ease-in-out 0.6s;
 
   &:hover,
@@ -93,7 +94,7 @@
   text-align: center;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto 15px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     @include flex (flex, row, nowrap);

@@ -1,11 +1,11 @@
 .hero {
   @include flex(flex, column, wrap);
   position: relative;
-  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     @include flex(flex, column, wrap);
     min-height: 790px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
