@@ -81,10 +81,13 @@
   @media (max-width: $mobile-max) {
     @include flex(flex, column, nowrap);
     position: static;
-    top: 65px;
-    left: 0;
     width: 100%;
-    z-index: 1;
     background-color: #ffffff;
+  }
+}
+
+.navigation--nojs .navigation__toogle {
+  @media (max-width: $mobile-max) {
+    display: none;
   }
 }
