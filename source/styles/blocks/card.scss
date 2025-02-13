@@ -86,7 +86,7 @@
 
     &:last-child {
       grid-template-columns: 243px;
-      grid-template-rows: 51% 50% 1fr;
+      grid-template-rows: 51% 50%;
       min-height: 430px;
 
       &::before {
