@@ -1,1 +1,0 @@
-var e=document.querySelector(".navigation"),o=document.querySelector(".navigation__toogle"),n=document.querySelector(".map__live");n.classList.remove("map__live--nojs");e.classList.remove("navigation--nojs");o.addEventListener("click",()=>{e.classList.toggle("navigation--closed"),e.classList.toggle("navigation--opened")});
